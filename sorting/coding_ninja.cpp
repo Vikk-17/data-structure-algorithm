@@ -3,6 +3,7 @@
 using namespace std;
 
 
+/*Selection Sort*/
 void selectionSort(vector<int> &arr)
 {
     // Write your code here.
@@ -21,6 +22,7 @@ void selectionSort(vector<int> &arr)
     }
 }
 
+/*Bubble sort*/
 void bubbleSort(vector<int> &arr, int n)
 {
     // write your code here
@@ -43,6 +45,7 @@ void bubbleSort(vector<int> &arr, int n)
     }
 }
 
+/*Insertion sort*/
 void insertionSort(int arr[], int n)
 {
     // write your code here
@@ -59,8 +62,66 @@ void insertionSort(int arr[], int n)
     }
 }
 
-    int main()
-    {
+/*Merge sort*/
+void merge(vector<int> &arr, int low, int mid, int high)
+{
+    vector<int> temp;
 
-        return 0;
+    int left = low;
+    int right = mid + 1;
+
+    while (left <= mid && right <= high)
+    {
+        if (arr[left] <= arr[right])
+        {
+            temp.push_back(arr[left]);
+            left++;
+        }
+        else
+        {
+            temp.push_back(arr[right]);
+            right++;
+        }
     }
+
+    while (left <= mid)
+    {
+        temp.push_back(arr[left]);
+        left++;
+    }
+
+    while (right <= high)
+    {
+        temp.push_back(arr[right]);
+        right++;
+    }
+
+    for (int i = low; i <= high; i++)
+    {
+        arr[i] = temp[i - low];
+    }
+}
+
+
+void mS(vector<int> &arr, int low, int high)
+{
+    int mid = (low + high) / 2;
+    // base case
+    if (low >= high)
+        return;
+    mS(arr, low, mid);
+    mS(arr, mid + 1, high);
+    merge(arr, low, mid, high);
+}
+
+void mergeSort(vector<int> &arr, int n)
+{
+    // Write your code here.
+    mS(arr, 0, n - 1);
+}
+
+int main()
+{
+
+    return 0;
+}
