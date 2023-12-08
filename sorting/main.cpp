@@ -21,7 +21,7 @@ void selectionSort(int n, int arr[]){
 // slight difference.
 
 void bubbleSort(int n, int arr[]){
-    for(int i= n-1; i>=1; i--){
+    for(int i = n-1; i>=1; i--){
         int didSwap = 0;
         for(int j = 0; j<=i-1; j++){
             if(arr[j]>arr[j+1]){
@@ -65,7 +65,7 @@ void insertionSort(int n, int arr[]){
             arr[j-1] = arr[j];
             arr[j] = temp;
             j--;
-            cout << "run\n" ;
+            cout << "run\n";
         }
     }
 }
