@@ -8,7 +8,7 @@
   - [x] Remove duplicates from the sorted array
   - [x] Left Rotate an array by one place
   - [x] Right Rotate an array by one place
-  - [ ] Left Rotate an array by D places
+  - [x] Left Rotate an array by D places
   - [ ] Right Rotate an array by D places
   - [ ] Move Zero to end
   - [ ] Linear Search
