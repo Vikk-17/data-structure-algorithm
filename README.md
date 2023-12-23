@@ -9,9 +9,9 @@
   - [x] Left Rotate an array by one place
   - [x] Right Rotate an array by one place
   - [x] Left Rotate an array by D places
-  - [ ] Right Rotate an array by D places
-  - [ ] Move Zero to end
-  - [ ] Linear Search
+  - [x] Right Rotate an array by D places
+  - [x] Move Zero to end
+  - [x] Linear Search
   - [ ] Find the Union
   - [ ] Find missing number in an array
   - [ ] Maximum Consecutive Ones
