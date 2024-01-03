@@ -12,7 +12,8 @@
   - [x] Right Rotate an array by D places
   - [x] Move Zero to end
   - [x] Linear Search
-  - [ ] Find the Union
+  - [x] Find the Union of two arrays
+  - [x] Find the intersection of two arrays
   - [ ] Find missing number in an array
   - [ ] Maximum Consecutive Ones
   - [ ] Find the number that appears once
