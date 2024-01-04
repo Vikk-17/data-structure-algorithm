@@ -14,7 +14,7 @@
   - [x] Linear Search
   - [x] Find the Union of two arrays
   - [x] Find the intersection of two arrays
-  - [ ] Find missing number in an array
+  - [x] Find missing number in an array
   - [ ] Maximum Consecutive Ones
   - [ ] Find the number that appears once
   - [ ] Longest subarray with given sum K
