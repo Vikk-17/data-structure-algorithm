@@ -2,6 +2,7 @@
 using namespace std;
 
 void printNatural(int i, int n){
+    // Print natural number from i to n 
     if(i>n) return;
     cout << i << endl;
     printNatural(i+1, n);
