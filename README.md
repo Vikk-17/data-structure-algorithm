@@ -16,6 +16,6 @@
   - [x] Find the intersection of two arrays
   - [x] Find missing number in an array
   - [ ] Maximum Consecutive Ones
-  - [ ] Find the number that appears once
+  - [x] Find the number that appears once
   - [ ] Longest subarray with given sum K
   - [ ] Longest subarray with sum k
