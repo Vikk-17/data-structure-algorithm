@@ -1,4 +1,5 @@
 #include<bits/stdc++.h>
+#include <unistd.h>
 using namespace std;
 
 /**
@@ -39,12 +40,37 @@ void decToBinary(int num){
     cout << endl;
 }
 
+/**
+int binToDec(string bin){
+    int p2 = 1, num = 0;
+    int len = bin.length();
+    for(int i = len - 1; i<=0; i++){
+        if(bin[i] == 1) p2 = num + p2;
+        p2 = p2 * 2;
+    }
+    return num;
+}
+*/
+int binToDec(int num){
+    int base = 1; // 2^0
+    int temp = num;
+    int lastDigit, decValue = 0;
+    while(temp){
+        lastDigit = temp % 10;
+        temp = temp / 10;
+        decValue += lastDigit * base;
+        base *= 2;
+    }
+    return decValue;
+}
+
 int main(){
     int number;
-    cout << "Enter a number >>> ";
+    cout << "Enter a decimal number >>> ";
     cin >> number;
     cout << convertToBinary(number) << endl;
-    decToBinary(number);
-    cout << sizeof(int) * 8 << endl;
+    cout << "Enter a binary number >>> ";
+    cin >> number;
+    cout << binToDec(number) << endl;
     return 0;
 }
