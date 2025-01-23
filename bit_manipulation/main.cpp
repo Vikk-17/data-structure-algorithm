@@ -64,7 +64,14 @@ int binToDec(int num){
     return decValue;
 }
 
+void swapTwoNumbers(int &x, int &y){
+    x = x ^ y;
+    y = x ^ y;
+    x = x ^ y;
+}
+
 int main(){
+    /**
     int number;
     cout << "Enter a decimal number >>> ";
     cin >> number;
@@ -72,5 +79,10 @@ int main(){
     cout << "Enter a binary number >>> ";
     cin >> number;
     cout << binToDec(number) << endl;
+    */
+    int a = 7, b = 8;
+    cout << a << " " << b << endl;
+    swapTwoNumbers(a, b);
+    cout << a << " " << b << endl;
     return 0;
 }
