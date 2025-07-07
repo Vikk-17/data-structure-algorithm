@@ -56,5 +56,8 @@ int majorityElementOptimal(vector<int>& nums) {
 }
 
 int main() {
-    // majorityElement(vector<int> &nums)
+    vector<int> arr = {2, 2, 1, 1, 1, 2, 2};
+    int ans = majorityElementOptimal(arr);
+    cout << "The majority element is: " << ans << endl;
+    return 0;
 }
