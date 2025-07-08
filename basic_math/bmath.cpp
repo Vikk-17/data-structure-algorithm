@@ -16,6 +16,21 @@ int cntdigit2(int n){
     return cnt;
 }
 
+// to reverse a number both negative and positive
+int reverse(int x) {
+        int rev = 0;
+        while(x){
+            int lastDigit = x % 10;
+
+            // to overcome the underflow and overflow in the next line
+            if((rev > INT_MAX / 10) || (rev < INT_MIN / 10)) return 0;
+            // without the above line will get the overflow/underflow error
+            rev = (10 * rev) + lastDigit;
+            x /= 10;
+        }
+        return rev;
+}
+
 int revNum(int n){
     int rev = 0;
     while(n>0){
