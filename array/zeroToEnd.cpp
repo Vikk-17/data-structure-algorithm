@@ -20,9 +20,7 @@ vector<int> zerosToEnd(vector<int>& arr){
 
 
 // optimal approach
-
-
-vector<int> moveZeros(vector<int> arr, int n){
+vector<int> zerosToEndOptimal(vector<int> arr, int n){
     if (n == 0) return arr;
     int j = -1;
     //find the first occurance of zero
@@ -50,7 +48,7 @@ int main(){
     
     vector<int> arr = {1, 0, 2, 3, 2, 0, 0, 4, 5, 1};
 
-    vector<int> ans = moveZeros(arr, 10);
+    vector<int> ans = zerosToEndOptimal(arr, 10);
     for (auto &it : ans) {
         cout << it << " ";
     }
