@@ -1,54 +1,28 @@
 use std::io;
-use std::error::Error;
 
-fn take_size() -> Result<i32, std::num::ParseIntError >{
+fn take_input() -> String {
     let mut input = String::new();
 
-    io::stdin()
-        .read_line(&mut input)
-        .expect("Failed to read stdin");
+    io::stdin().read_line(&mut input).unwrap();
 
-    let number = input.trim().parse::<i32>()?;
-
-    return Ok(number);
-}
-
-fn take_input() -> Result<String, Box<dyn Error>> {
-    let mut s = String::new();
-    io::stdin()
-        .read_line(&mut s)
-        .expect("Cannot read from the stdin");
-    let string = s.trim().to_string();
-
-    Ok(string)
+    input.trim().to_owned()
 }
 
 fn main() {
-
-    // take the input
-    let mut size = match take_size() {
-        Ok(val) => val,
-        Err(_) => {
-            println!("Invalid integer");
-            return;
-        }
-    };
+    let n: usize = take_input().parse().unwrap();
 
     // set the variable
     let mut x = 0;
 
     // run the loop
-    while size > 0 {
-        let string = take_input().ok().unwrap();
-        let first_byte = string.as_bytes()[1];
-        let c = first_byte as char;
+    for _ in 0..n {
+        let op = take_input();
 
-        if c == '+' {
+        if op.as_bytes()[1] == b'+' {
             x += 1;
         } else {
             x -= 1;
         }
-        size -= 1;
     }
     println!("{}", x);
 }
