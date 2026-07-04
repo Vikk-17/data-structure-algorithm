@@ -21,7 +21,6 @@ fn take_three_number() -> Vec<i32> {
         .read_line(&mut input)
         .expect("Failed to read the line");
 
-
     input
         .split_whitespace()
         .map(|s| s.parse::<i32>().unwrap())
@@ -41,7 +40,6 @@ fn problems_to_solve(rows: &Rows) {
     println!("{}", count);
 }
 
-
 fn main() {
     let mut input_vec: Rows = Vec::new();
     let size = match take_size() {
@@ -51,7 +49,7 @@ fn main() {
             return;
         }
     };
-    
+
     for _ in 0..size {
         let numbers = take_three_number();
         input_vec.push(numbers);
@@ -59,5 +57,4 @@ fn main() {
 
     // println!("{:?}", input_vec);
     problems_to_solve(&input_vec);
-
 }

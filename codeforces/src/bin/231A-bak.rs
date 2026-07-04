@@ -33,16 +33,15 @@ fn take_number() -> Result<i32, std::num::ParseIntError> {
     Ok(number)
 }
 
-
 fn main() {
     let mut input_vec: Vec<Friends> = Vec::new();
 
     let size = match take_number() {
-        Ok(n) =>  n,
+        Ok(n) => n,
         Err(e) => {
             println!("Invalid input: {}", e);
             return;
-       }
+        }
     };
 
     for _ in 0..size {
@@ -58,6 +57,4 @@ fn main() {
     // for name in input_vec.iter() {
     //     println!("{:?}", name);
     // }
-
-
 }
