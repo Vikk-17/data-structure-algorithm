@@ -1,2 +1,4 @@
 # Ignore files with .out extension
 *.out
+
+target/
