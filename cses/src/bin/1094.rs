@@ -15,5 +15,4 @@ fn main() {
             arr[i] = arr[i-1];
         }
     }
-    println!("{cost}");
 }
