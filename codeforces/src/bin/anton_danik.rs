@@ -5,7 +5,6 @@ fn take_input() -> String {
 }
 
 fn main() {
-    let mut histogram = HashMap::new();
     let number_of_round: usize = take_input().trim().parse::<usize>().expect("Could not parse the number");
     let winner_string = take_input().trim().to_owned();
 
