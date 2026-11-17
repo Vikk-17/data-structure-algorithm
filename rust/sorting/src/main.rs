@@ -1,4 +1,4 @@
-// use sorting::{take_input, Sorting};
+use sorting::{take_input, Sorting};
 // use sorting::Sorting;
 
 fn main() {
