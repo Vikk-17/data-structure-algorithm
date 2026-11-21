@@ -56,16 +56,16 @@ impl Search for Solution {
             let mid = low + (high - low) / 2;
             if nums[mid] == target {
                 return mid as i32;
-            } else if nums[mid] > target {
+            } else if mid != 0 && nums[mid] > target {
                 // Possible case:
                 // The condition 'high >= low' with 'high = mid - 1'
                 // where high is usize can cause an underflow panic
                 // when mid is 0, failing the O(log n) worst-case requirement
                 // for certain inputs.
 
-                if mid == 0 {
-                    return -1;
-                }
+                // if mid == 0 {
+                //     return -1;
+                // }
                 high = mid - 1;
             } else {
                 low = mid + 1;
